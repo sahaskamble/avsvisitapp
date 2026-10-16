@@ -39,7 +39,7 @@ jobs:
             --arg version "${GITHUB_REF_NAME#v}" \
             --argjson build "$(git rev-list --count HEAD)" \
             --arg notes "$(git log -1 --pretty=%s)" \
-            --arg url "https://github.com/OWNER/visitapp-releases/releases/latest/download/visitapp.apk" \
+            --arg url "https://github.com/sahaskamble/visitapp-releases/releases/latest/download/visitapp.apk" \
             '{version: $version, build: $build, notes: $notes, url: $url}' > version.json
 
       - name: Publish release
@@ -47,6 +47,6 @@ jobs:
           GH_TOKEN: ${{ secrets.RELEASES_PAT }}
         run: |
           gh release create "$GITHUB_REF_NAME" visitapp.apk version.json \
-            --repo OWNER/visitapp-releases \
+            --repo sahaskamble/visitapp-releases \
             --title "$GITHUB_REF_NAME" \
             --notes "$(git log -1 --pretty=%s)"
