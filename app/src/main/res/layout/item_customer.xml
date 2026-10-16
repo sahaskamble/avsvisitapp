@@ -1,0 +1,306 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_12"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="@dimen/margin_4"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_8"
+    android:background="@drawable/cardview_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_weight="0.9"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginRight="@dimen/margin_5"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold"/>
+
+
+        <TextView android:id="@+id/tvName"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:background="@color/white_tranparent"
+            android:fontFamily="@font/poppins"
+            android:gravity="left|top"
+            android:lineSpacingExtra="@dimen/margin_4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_weight="0.9"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:text="Mobile Number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginRight="@dimen/margin_5"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold"/>
+
+
+        <TextView android:id="@+id/tvMobile"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:background="@color/white_tranparent"
+            android:fontFamily="@font/poppins"
+            android:gravity="left|top"
+            android:lineSpacingExtra="@dimen/margin_4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvAddress"-->
+<!--        android:text="Address"-->
+<!--        android:textSize="@dimen/font_size_14"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_weight="0.9"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:text="Branch Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginRight="@dimen/margin_5"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold"/>
+
+
+        <TextView android:id="@+id/tvBranchName"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:background="@color/white_tranparent"
+            android:fontFamily="@font/poppins"
+            android:gravity="left|top"
+            android:lineSpacingExtra="@dimen/margin_4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_weight="0.9"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:text="Ac/No"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginRight="@dimen/margin_5"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold"/>
+
+
+        <TextView android:id="@+id/tvLoanAc"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:background="@color/white_tranparent"
+            android:fontFamily="@font/poppins"
+            android:gravity="left|top"
+            android:lineSpacingExtra="@dimen/margin_4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_weight="0.9"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:text="OD Amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginRight="@dimen/margin_5"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold"/>
+
+
+        <TextView android:id="@+id/tvoverdue"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:background="@color/white_tranparent"
+            android:fontFamily="@font/poppins"
+            android:gravity="left|top"
+            android:lineSpacingExtra="@dimen/margin_4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_weight="0.9"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:text="Remark"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginRight="@dimen/margin_5"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14"
+            android:textStyle="bold"/>
+
+
+        <TextView android:id="@+id/tvRemark"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:background="@color/white_tranparent"
+            android:fontFamily="@font/poppins"
+            android:gravity="left|top"
+            android:lineSpacingExtra="@dimen/margin_4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_12"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:text="Pending"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_size_14"
+        android:gravity="end"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

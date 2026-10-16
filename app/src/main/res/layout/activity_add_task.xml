@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".AddTaskActivity">
+
+    <!-- ✅ Added AppBar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@color/white"
+        app:title="Task Management"
+        app:titleCentered="true"
+        app:titleTextColor="@color/colorPrimaryDark" />
+
+    <!-- ✅ Thin divider line under AppBar -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DDDDDD" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:paddingTop="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- Employee No -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/empNoLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:hint="Employee No"
+                android:textColorHint="@color/colorPrimaryDark"
+                app:boxBackgroundColor="@color/grey_background"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:hintTextColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/empNo"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_rounded"
+                    android:paddingVertical="@dimen/margin_15"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/userNameLayout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:hint="Assign to"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            app:boxBackgroundColor="@color/grey_background"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"
+                            app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"
+                            app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"
+                            app:boxCornerRadiusTopStart="@dimen/corner_radius_8"
+                            app:boxStrokeColor="@color/colorPrimaryDark"
+                            app:hintTextColor="@color/colorPrimaryDark">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/userName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_input_rounded"
+                                android:clickable="true"
+                                android:dropDownWidth="wrap_content"
+                                android:dropDownHeight="wrap_content"
+
+                                android:paddingVertical="@dimen/margin_15"
+                                android:paddingLeft="@dimen/margin_15"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_size_14" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- User Name -->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/userNameLayout"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/margin_8"-->
+<!--                android:layout_marginTop="@dimen/margin_8"-->
+<!--                android:hint="User Name"-->
+<!--                android:textColorHint="@color/colorPrimaryDark"-->
+<!--                app:boxBackgroundColor="@color/grey_background"-->
+<!--                app:boxBackgroundMode="outline"-->
+<!--                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"-->
+<!--                app:boxStrokeColor="@color/colorPrimaryDark"-->
+<!--                app:hintTextColor="@color/colorPrimaryDark">-->
+
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/userName"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/bg_input_rounded"-->
+<!--                    android:paddingVertical="@dimen/margin_15"-->
+<!--                    android:paddingLeft="@dimen/margin_15"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_size_14" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!-- Branch -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/branchLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:hint="Branch"
+                android:textColorHint="@color/colorPrimaryDark"
+                app:boxBackgroundColor="@color/grey_background"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:hintTextColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/branch"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_rounded"
+                    android:paddingVertical="@dimen/margin_15"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Zone -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/zoneLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:hint="Zone"
+                android:textColorHint="@color/colorPrimaryDark"
+                app:boxBackgroundColor="@color/grey_background"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:hintTextColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/zone"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_rounded"
+                    android:paddingVertical="@dimen/margin_15"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Work Allocation -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/workAllocationLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:hint="Work Allocation"
+                android:textColorHint="@color/colorPrimaryDark"
+                app:boxBackgroundColor="@color/grey_background"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:hintTextColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workAllocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_rounded"
+                    android:gravity="top"
+                    android:lines="4"
+                    android:paddingVertical="@dimen/margin_15"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Task Date -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/taskDateLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:hint="Task Date"
+                android:textColorHint="@color/colorPrimaryDark"
+                app:boxBackgroundColor="@color/grey_background"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:hintTextColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/taskDate"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_rounded"
+                    android:paddingVertical="@dimen/margin_15"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Work completion Details  -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dailyWrkCompDetailsLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:hint="Work completion Details"
+                android:textColorHint="@color/colorPrimaryDark"
+                app:boxBackgroundColor="@color/grey_background"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:hintTextColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dailyWrkCompDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_rounded"
+                    android:gravity="top"
+                    android:lines="4"
+                    android:paddingVertical="@dimen/margin_15"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Other remarks -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/remarkLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:hint="Other Remarks"
+                android:textColorHint="@color/colorPrimaryDark"
+                app:boxBackgroundColor="@color/grey_background"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"
+                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:hintTextColor="@color/colorPrimaryDark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_rounded"
+                    android:paddingVertical="@dimen/margin_15"
+                    android:paddingLeft="@dimen/margin_15"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btnSaveTask"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_button_custom"
+                android:elevation="4dp"
+                android:text="Save Task"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/white"-->
+<!--    android:fitsSystemWindows="true"-->
+<!--    android:orientation="vertical"-->
+<!--    tools:context=".AddTaskActivity">-->
+
+<!--    &lt;!&ndash; ✅ Added AppBar &ndash;&gt;-->
+<!--    <com.google.android.material.appbar.MaterialToolbar-->
+<!--        android:id="@+id/topAppBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="@color/colorPrimary"-->
+<!--        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"-->
+<!--        app:navigationIcon="@drawable/ic_arrow_back"-->
+<!--        app:navigationIconTint="@color/white"-->
+<!--        app:title="Task Management"-->
+<!--        app:titleCentered="true"-->
+<!--        app:titleTextColor="@color/colorPrimaryDark" />-->
+
+<!--    &lt;!&ndash; ✅ Thin divider line under AppBar &ndash;&gt;-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="2dp"-->
+<!--        android:background="#DDDDDD" />-->
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:fillViewport="true"-->
+<!--        android:paddingTop="6dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:paddingBottom="24dp">-->
+
+<!--            &lt;!&ndash; Task Title &ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/taskTitleLayout"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/margin_8"-->
+<!--                android:layout_marginTop="@dimen/margin_8"-->
+<!--                android:hint="Task Title"-->
+<!--                android:textColorHint="@color/colorPrimaryDark"-->
+<!--                app:boxBackgroundColor="@color/grey_background"-->
+<!--                app:boxBackgroundMode="outline"-->
+<!--                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"-->
+<!--                app:boxStrokeColor="@color/colorPrimaryDark"-->
+<!--                app:hintTextColor="@color/colorPrimaryDark">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/taskTitle"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/bg_input_rounded"-->
+<!--                    android:paddingVertical="@dimen/margin_15"-->
+<!--                    android:paddingLeft="@dimen/margin_15"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_size_14" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash; Description &ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/descriptionLayout"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/margin_8"-->
+<!--                android:layout_marginTop="@dimen/margin_8"-->
+<!--                android:hint="Description"-->
+<!--                android:textColorHint="@color/colorPrimaryDark"-->
+<!--                app:boxBackgroundColor="@color/grey_background"-->
+<!--                app:boxBackgroundMode="outline"-->
+<!--                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"-->
+<!--                app:boxStrokeColor="@color/colorPrimaryDark"-->
+<!--                app:hintTextColor="@color/colorPrimaryDark">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/description"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/bg_input_rounded"-->
+<!--                    android:gravity="top"-->
+<!--                    android:lines="4"-->
+<!--                    android:paddingVertical="@dimen/margin_15"-->
+<!--                    android:paddingLeft="@dimen/margin_15"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_size_14" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash; Assign By (dropdown) &ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/assignByLayout"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/margin_8"-->
+<!--                android:layout_marginTop="@dimen/margin_8"-->
+<!--                android:hint="Assign By"-->
+<!--                android:textColorHint="@color/colorPrimaryDark"-->
+<!--                app:boxBackgroundColor="@color/grey_background"-->
+<!--                app:boxBackgroundMode="outline"-->
+<!--                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"-->
+<!--                app:boxStrokeColor="@color/colorPrimaryDark"-->
+<!--                app:hintTextColor="@color/colorPrimaryDark">-->
+
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/etAssignBy"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/bg_input_rounded"-->
+<!--                    android:clickable="true"-->
+<!--                    android:dropDownWidth="wrap_content"-->
+<!--                    android:dropDownHeight="wrap_content"-->
+<!--                    android:focusable="false"-->
+<!--                    android:inputType="none"-->
+<!--                    android:paddingVertical="@dimen/margin_15"-->
+<!--                    android:paddingLeft="@dimen/margin_15"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_size_14" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash; Priority (dropdown) &ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/priorityLayout"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/margin_8"-->
+<!--                android:layout_marginTop="@dimen/margin_8"-->
+<!--                android:hint="Priority"-->
+<!--                android:textColorHint="@color/colorPrimaryDark"-->
+<!--                app:boxBackgroundColor="@color/grey_background"-->
+<!--                app:boxBackgroundMode="outline"-->
+<!--                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"-->
+<!--                app:boxStrokeColor="@color/colorPrimaryDark"-->
+<!--                app:hintTextColor="@color/colorPrimaryDark">-->
+
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/priority"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/bg_input_rounded"-->
+<!--                    android:clickable="true"-->
+<!--                    android:dropDownWidth="wrap_content"-->
+<!--                    android:dropDownHeight="wrap_content"-->
+<!--                    android:focusable="false"-->
+<!--                    android:inputType="none"-->
+<!--                    android:paddingVertical="@dimen/margin_15"-->
+<!--                    android:paddingLeft="@dimen/margin_15"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_size_14" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash; Approx Time &ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/approxTimeLayout"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/margin_8"-->
+<!--                android:layout_marginTop="@dimen/margin_8"-->
+<!--                android:hint="Approx Time (In minutes)"-->
+<!--                android:textColorHint="@color/colorPrimaryDark"-->
+<!--                app:boxBackgroundColor="@color/grey_background"-->
+<!--                app:boxBackgroundMode="outline"-->
+<!--                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"-->
+<!--                app:boxStrokeColor="@color/colorPrimaryDark"-->
+<!--                app:hintTextColor="@color/colorPrimaryDark">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/approxTime"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/bg_input_rounded"-->
+<!--                    android:inputType="number"-->
+<!--                    android:paddingVertical="@dimen/margin_15"-->
+<!--                    android:paddingLeft="@dimen/margin_15"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_size_14" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash; Status (dropdown) &ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/statusLayout"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="@dimen/margin_8"-->
+<!--                android:layout_marginTop="@dimen/margin_8"-->
+<!--                android:hint="Status"-->
+<!--                android:textColorHint="@color/colorPrimaryDark"-->
+<!--                app:boxBackgroundColor="@color/grey_background"-->
+<!--                app:boxBackgroundMode="outline"-->
+<!--                app:boxCornerRadiusBottomEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusBottomStart="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopEnd="@dimen/corner_radius_8"-->
+<!--                app:boxCornerRadiusTopStart="@dimen/corner_radius_8"-->
+<!--                app:boxStrokeColor="@color/colorPrimaryDark"-->
+<!--                app:hintTextColor="@color/colorPrimaryDark">-->
+
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/status"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/bg_input_rounded"-->
+<!--                    android:clickable="true"-->
+<!--                    android:dropDownWidth="wrap_content"-->
+<!--                    android:dropDownHeight="wrap_content"-->
+<!--                    android:focusable="false"-->
+<!--                    android:inputType="none"-->
+<!--                    android:paddingVertical="@dimen/margin_15"-->
+<!--                    android:paddingLeft="@dimen/margin_15"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/font_size_14" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash; Save Button &ndash;&gt;-->
+<!--            <Button-->
+<!--                android:id="@+id/btnSaveTask"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="52dp"-->
+<!--                android:layout_marginHorizontal="@dimen/margin_8"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:background="@drawable/bg_button_custom"-->
+<!--                android:elevation="4dp"-->
+<!--                android:text="Save Task"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="16sp" />-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+<!--</LinearLayout>-->
+

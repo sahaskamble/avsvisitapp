@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">VisitApp</string>
+
+<!--    <string name="app_name">BNSPF VISIT</string>-->
+
+    <string-array name="leave_types">
+        <item>Select Leave Type</item>
+        <item>CL</item>
+        <item>SL</item>
+        <item>PL</item>
+    </string-array>
+
+    <string-array name="promise_to_pay_options">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+
+    <string-array name="task_priority_list">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+
+    <string-array name="task_status_list">
+        <item>Pending</item>
+        <item>In Progress</item>
+        <item>Completed</item>
+    </string-array>
+
+
+
+
+    <!--Login Screen-->
+    <string name="welcome">Welcome Back!</string>
+    <string name="login_to_ac">Login to your account</string>
+    <string name="emp_code">Empolyee Code</string>
+    <string name="password_or_otp">Password or OTP</string>
+    <string name="role">Select Your Role</string>
+    <string name="password">Password</string>
+    <string name="otp">Enter OTP</string>
+    <string name="Login">Log in</string>
+    <string name="user_name">Username</string>
+    <string name="title_activity_visit">VisitActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    // Dashboard
+    <string name="dashboard">Dashboard</string>
+
+
+</resources>

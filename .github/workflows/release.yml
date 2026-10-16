@@ -1,0 +1,52 @@
+name: Release APK
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Decode keystore
+        run: echo "${{ secrets.KEYSTORE_B64 }}" | base64 -d > app/upload-keystore.jks
+
+      - name: Build release APK
+        run: |
+          export VERSION_NAME=${GITHUB_REF_NAME#v}
+          export VERSION_CODE=$(git rev-list --count HEAD)
+          chmod +x gradlew
+          ./gradlew assembleRelease
+
+      - name: Prepare artifacts
+        run: |
+          cp app/build/outputs/apk/release/app-release.apk visitapp.apk
+          jq -n \
+            --arg version "${GITHUB_REF_NAME#v}" \
+            --argjson build "$(git rev-list --count HEAD)" \
+            --arg notes "$(git log -1 --pretty=%s)" \
+            --arg url "https://github.com/OWNER/visitapp-releases/releases/latest/download/visitapp.apk" \
+            '{version: $version, build: $build, notes: $notes, url: $url}' > version.json
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ secrets.RELEASES_PAT }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" visitapp.apk version.json \
+            --repo OWNER/visitapp-releases \
+            --title "$GITHUB_REF_NAME" \
+            --notes "$(git log -1 --pretty=%s)"

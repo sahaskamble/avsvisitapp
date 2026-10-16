@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buttonLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_8"
+    android:gravity="end"
+    android:orientation="horizontal"
+    android:background="@color/card_even">
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white" />
+
+    <Space
+        android:layout_width="@dimen/margin_16"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download"
+        android:backgroundTint="@color/color_green"
+        android:textColor="@color/white" />
+
+</LinearLayout>

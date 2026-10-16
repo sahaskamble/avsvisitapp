@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0D47A1</color>
+    <color name="colorPrimaryDark">#1a5d88</color>
+    <color name="colorAccent">#5b5b5b</color>
+    <color name="nav_item_selected">#19628d</color>
+    <color name="nav_item_not_selected">#6e6e6e</color>
+    <color name="text_color_heading_name">#333333</color>
+
+    <color name="card_odd">#72cdce</color>
+    <color name="card_even">#4fc1c2</color>
+    <color name="bt_normal">#363f46</color>
+    <color name="bt_hover">#65686b</color>
+    <color name="startcolor">#ee0979</color>
+    <color name="toolbar">#72cdce</color>
+    <color name="end_color">#ff6a00</color>
+    <color name="hint_color">#AA888888</color>
+    <color name="white_tranparent">#b4ffffff</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#8692f7</color>
+    <color name="purple1">#ad00fa</color>
+    <color name="blue">#5d74f4</color>
+    <color name="orange">#ffa500</color>
+    <color name="yellow">#ffc000</color>
+    <color name="violet">#380e3b</color>
+    <color name="pink">#ff57c7</color>
+    <color name="primarydark">#3A66C6</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorDark">#C7D0E6</color>
+    <color name="color_green">#0B9444</color>
+    <color name="color_profile_text">#FFBB86FC</color>
+    <color name="primaryColor">#3F51B5</color>
+    <color name="primaryTool">#6200EE</color>
+    <color name="red">#D23021</color>
+    <color name="colorloginback">#6200EE</color>
+    <color name="app_bg_color">#E4D6CD</color>
+
+    <color name="gold">#FFD700</color>
+    <color name="gray">#D3D3D3</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="gradient_start">#FF9800</color>
+    <color name="gradient_end">#FF5722</color>
+    <color name="colorLightGray">#F5F5F5</color>
+    <color name="colorSoftBlue">#E3F2FD</color>
+    <color name="colorBeige">#FAF3E0</color>
+    <color name="golden">#FFD700</color>
+    <color name="light_golden">#FFF8DC</color>
+    <color name="graystar">#C0C0C0</color>
+    <color name="purple_light">#6200EE</color>
+
+
+    <color name="present_day">#388E3C</color>     <!-- Dark green -->
+    <color name="absent_day">#FFCDD2</color>      <!-- Light red -->
+    <color name="week_off_day">#D32F2F</color>    <!-- Dark red -->
+
+
+
+</resources>

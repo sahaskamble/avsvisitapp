@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/margin_8"
+    android:paddingHorizontal="@dimen/margin_4">
+
+    <TextView
+        android:id="@+id/tvLeaveDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="05 Mar – 07 Mar"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/font_size_15" />
+
+    <TextView
+        android:id="@+id/tvLeaveType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Casual leave"
+        android:layout_marginTop="@dimen/margin_4"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginHorizontal="@dimen/margin_4"
+        android:background="@color/gray"/>
+
+</LinearLayout>

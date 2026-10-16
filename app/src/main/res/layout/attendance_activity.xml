@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <!-- Back icon -->
+        <ImageView
+            android:id="@+id/toolbarBack"
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="@dimen/margin_30"
+            android:src="@drawable/ic_back_visit"
+            android:padding="@dimen/margin_5"
+            android:layout_marginStart="@dimen/margin_12"
+            android:contentDescription="Back" />
+
+        <!-- Title in center -->
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="DAILY ATTENDANCE"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/font_size_20"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="@dimen/margin_20"
+            android:layout_height="@dimen/margin_30"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <!--            <ImageView-->
+            <!--            android:id="@+id/toolbarCalendar"-->
+            <!--            android:layout_width="@dimen/margin_26"-->
+            <!--            android:layout_height="@dimen/margin_26"-->
+            <!--            android:src="@drawable/ic_cal_image"-->
+            <!--            android:contentDescription="Calendar" />-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/margin_12">
+
+            <!-- In / Out Section (Updated with Gradients and White Text/Icons) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Clock In Card (Blue/Purple Gradient) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardClockIn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_150"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/margin_6"
+                    app:cardCornerRadius="@dimen/margin_16"
+                    app:cardElevation="@dimen/margin_8">
+
+                    <LinearLayout
+                        android:id="@+id/check_IN"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/bg_gradient_in"
+                        android:padding="@dimen/margin_8"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <!-- Icon is white, matching the image -->
+                        <ImageView
+                            android:layout_width="@dimen/margin_40"
+                            android:layout_height="@dimen/margin_40"
+                            android:src="@drawable/ic_clock"
+                            app:tint="@color/white"
+                            android:contentDescription="Clock In Icon" />
+
+                        <!-- Clock In Text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Clock In"
+                            android:textSize="@dimen/font_size_16"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="@dimen/margin_8" />
+
+                        <!-- Tap to Clock In Subtitle -->
+                        <TextView
+                            android:id="@+id/textInTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tap to Clock In"
+                            android:textSize="@dimen/font_size_12"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Clock Out Card (Red/Orange Gradient) -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardClockOut"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_150"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/margin_6"
+                    app:cardCornerRadius="@dimen/margin_16"
+                    app:cardElevation="@dimen/margin_8">
+
+                    <LinearLayout
+                        android:id="@+id/check_Out"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/bg_gradient_out"
+                        android:padding="@dimen/margin_8"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <!-- Icon is white, matching the image -->
+                        <ImageView
+                            android:layout_width="@dimen/margin_40"
+                            android:layout_height="@dimen/margin_40"
+                            android:src="@drawable/ic_clock"
+                            app:tint="@color/white"
+                            android:contentDescription="Clock Out Icon" />
+
+                        <!-- Clock Out Text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Clock Out"
+                            android:textSize="@dimen/font_size_16"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="@dimen/margin_8" />
+
+                        <!-- Tap to Clock Out Subtitle -->
+                        <TextView
+                            android:id="@+id/textOutTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tap to Clock Out"
+                            android:textSize="@dimen/font_size_12"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Status Chips (Replaces Color Legend) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_10">
+
+                <!-- Present Chip (Using TextView with a styled background/drawable to mimic the image) -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Present"
+                    android:textColor="#4CAF50"
+                    android:textSize="@dimen/font_size_14"
+                    android:paddingVertical="@dimen/margin_8"
+                    android:paddingHorizontal="@dimen/margin_14"
+                    android:drawableStart="@drawable/ic_check_green"
+                    android:drawablePadding="@dimen/margin_4"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_chip_white_rounded"
+                    android:elevation="@dimen/margin_2"
+                    android:layout_marginEnd="@dimen/margin_8"/>
+
+                <!-- Absent Chip -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Absent"
+                    android:textColor="#F44336"
+                    android:textSize="@dimen/font_size_14"
+                    android:paddingVertical="@dimen/margin_8"
+                    android:paddingHorizontal="@dimen/margin_14"
+                    android:drawableStart="@drawable/ic_close_red"
+                    android:drawablePadding="@dimen/margin_4"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_chip_white_rounded"
+                    android:elevation="@dimen/margin_2"
+                    android:layout_marginEnd="@dimen/margin_8"/>
+
+                <!-- Week Off Chip -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Week Off"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_14"
+                    android:paddingVertical="@dimen/margin_8"
+                    android:paddingHorizontal="@dimen/margin_14"
+                    android:drawableStart="@drawable/ic_cloud_red"
+                    android:drawablePadding="@dimen/margin_4"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_chip_white_rounded"
+                    android:elevation="@dimen/margin_2"/>
+
+            </LinearLayout>
+
+<!--            &lt;!&ndash; Calendar Card (Wraps the Calendar View) &ndash;&gt;-->
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="@dimen/margin_16"-->
+<!--                android:layout_marginHorizontal="@dimen/margin_2"-->
+<!--                app:cardCornerRadius="@dimen/margin_16"-->
+<!--                app:cardElevation="@dimen/margin_6"-->
+<!--                app:cardBackgroundColor="@color/white">-->
+
+<!--                &lt;!&ndash; Wrapper LinearLayout to apply the border/stroke look &ndash;&gt;-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:background="@drawable/bg_card_with_subtle_border">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="#FAFAFA"-->
+<!--                        android:paddingVertical="@dimen/margin_12"-->
+<!--                        android:paddingHorizontal="@dimen/margin_16">-->
+
+<!--                        &lt;!&ndash; Left Arrow &ndash;&gt;-->
+<!--                        <ImageView-->
+<!--                            android:id="@+id/img_prev_month"-->
+<!--                            android:layout_width="@dimen/margin_24"-->
+<!--                            android:layout_height="@dimen/margin_24"-->
+<!--                            android:layout_alignParentStart="true"-->
+<!--                            android:src="@drawable/ic_arrow_back"-->
+<!--                            app:tint="@color/black"-->
+<!--                            android:visibility="gone"-->
+<!--                            android:contentDescription="Previous Month"-->
+<!--                            android:clickable="true"-->
+<!--                            android:focusable="true"/>-->
+
+<!--                        &lt;!&ndash; Month Text &ndash;&gt;-->
+<!--                        <TextView-->
+<!--                            android:id="@+id/textMonthYear"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="September 2025"-->
+<!--                            android:textSize="@dimen/font_size_18"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:layout_centerInParent="true"-->
+<!--                            android:textColor="@color/black"/>-->
+
+<!--                        &lt;!&ndash; Right Arrow &ndash;&gt;-->
+<!--                        <ImageView-->
+<!--                            android:id="@+id/img_next_month"-->
+<!--                            android:layout_width="@dimen/margin_24"-->
+<!--                            android:layout_height="@dimen/margin_24"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:src="@drawable/ic_arrow_forward"-->
+<!--                            app:tint="@color/black"-->
+<!--                            android:visibility="gone"-->
+<!--                            android:contentDescription="Next Month"-->
+<!--                            android:clickable="true"-->
+<!--                            android:focusable="true"/>-->
+<!--                    </RelativeLayout>-->
+
+<!--                    &lt;!&ndash; Separator Line below header &ndash;&gt;-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="#EEEEEE"/>-->
+
+<!--                    &lt;!&ndash; Calendar View &ndash;&gt;-->
+<!--                    <com.prolificinteractive.materialcalendarview.MaterialCalendarView-->
+<!--                        android:id="@+id/calendarView"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:padding="@dimen/margin_8"-->
+<!--                        app:mcv_showOtherDates="all"-->
+<!--                        android:background="@color/white"-->
+<!--                        app:mcv_selectionColor="@color/present_day"-->
+<!--                        app:mcv_weekDayTextAppearance="@style/CalendarWeekText"-->
+<!--                        app:mcv_dateTextAppearance="@style/CalendarDayText"-->
+<!--                        app:mcv_calendarMode="month"-->
+<!--                        app:mcv_headerTextAppearance="@style/CalendarHeaderInvisible" />-->
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="#EEEEEE"/>-->
+
+<!--                    &lt;!&ndash; Footer &ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:paddingVertical="@dimen/margin_10"-->
+<!--                        android:text="© 2025 AVS in-so-tech. All rights reserved."-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="@dimen/font_size_8" />-->
+
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+            <!-- Calendar Card (Wraps the Calendar View) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:layout_marginHorizontal="@dimen/margin_2"
+                app:cardCornerRadius="@dimen/margin_16"
+                app:cardElevation="@dimen/margin_6"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_with_subtle_border">
+
+                    <!-- Header (Month-Year + Arrows) -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FAFAFA"
+                        android:paddingVertical="@dimen/margin_12"
+                        android:paddingHorizontal="@dimen/margin_16">
+
+                        <ImageView
+                            android:id="@+id/img_prev_month"
+                            android:layout_width="@dimen/margin_24"
+                            android:layout_height="@dimen/margin_24"
+                            android:layout_alignParentStart="true"
+                            android:src="@drawable/ic_arrow_back"
+                            app:tint="@color/black"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/textMonthYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="September 2025"
+                            android:textSize="@dimen/font_size_18"
+                            android:textStyle="bold"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/img_next_month"
+                            android:layout_width="@dimen/margin_24"
+                            android:layout_height="@dimen/margin_24"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:tint="@color/black"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EEEEEE" />
+
+                    <!-- 🧩 FrameLayout wrapping the calendar + loading spinner -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_8"
+                            app:mcv_showOtherDates="all"
+                            android:background="@color/white"
+                            app:mcv_selectionColor="@color/present_day"
+                            app:mcv_weekDayTextAppearance="@style/CalendarWeekText"
+                            app:mcv_dateTextAppearance="@style/CalendarDayText"
+                            app:mcv_calendarMode="month"
+                            app:mcv_headerTextAppearance="@style/CalendarHeaderInvisible" />
+
+                        <!-- Loading spinner only over the calendar -->
+                        <ProgressBar
+                            android:id="@+id/calendarLoadingSpinner"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:indeterminate="true"
+                            android:indeterminateTint="@color/colorPrimary"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EEEEEE" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/margin_10"
+                        android:text="© 2025 AVS in-so-tech. All rights reserved."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_8" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/colorPrimary" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

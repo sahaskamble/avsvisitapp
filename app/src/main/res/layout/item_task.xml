@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/bg_input_rounded"
+    android:padding="16dp">
+
+    <!-- USER NAME -->
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User: -"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:paddingBottom="6dp" />
+
+    <!-- BRANCH -->
+    <TextView
+        android:id="@+id/tvBranch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Branch: -"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:paddingBottom="4dp" />
+
+    <!-- WORK ALLOCATION -->
+    <TextView
+        android:id="@+id/tvWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Work: -"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:paddingBottom="4dp" />
+
+    <!-- TASK DATE -->
+    <TextView
+        android:id="@+id/tvTaskDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Task Date: -"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:paddingBottom="6dp" />
+
+    <!-- COMPLETION DETAILS -->
+    <TextView
+        android:id="@+id/tvCompletion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Completion: -"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:paddingBottom="4dp" />
+
+    <!-- REMARKS -->
+    <TextView
+        android:id="@+id/tvRemarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remarks: -"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:paddingBottom="6dp" />
+
+    <!-- STATUS -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Pending"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp" />
+
+</LinearLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="12dp"-->
+
+<!--    android:layout_marginBottom="8dp">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvTitle"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvDescription"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvPriority"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvStatus"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvDate"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="@color/gray" />-->
+<!--</LinearLayout>-->

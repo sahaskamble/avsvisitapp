@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LoanTypeLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Loan type"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/margin_8"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:hintTextColor="@color/colorPrimaryDark">
+
+        <AutoCompleteTextView
+            android:id="@+id/LoanType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:focusable="false"
+            android:clickable="true"
+            android:paddingLeft="@dimen/margin_15"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14"
+            android:paddingVertical="@dimen/margin_15"
+            android:dropDownHeight="wrap_content"
+            android:dropDownWidth="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/AmountLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Amount"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/margin_8"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:hintTextColor="@color/colorPrimaryDark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/CibilScoreLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cibil Score"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/margin_8"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:hintTextColor="@color/colorPrimaryDark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cibilscore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/EligibilityLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Eligibility"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/margin_8"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:hintTextColor="@color/colorPrimaryDark">
+
+        <AutoCompleteTextView
+            android:id="@+id/Eligibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:focusable="false"
+            android:clickable="true"
+            android:paddingLeft="@dimen/margin_15"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14"
+            android:paddingVertical="@dimen/margin_15"
+            android:dropDownHeight="wrap_content"
+            android:dropDownWidth="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/salaryLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="salary/Bussiness"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/margin_8"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:hintTextColor="@color/colorPrimaryDark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/salaryBussiness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PeriodLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Period"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/margin_8"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:hintTextColor="@color/colorPrimaryDark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/RateLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rate"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/margin_8"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:hintTextColor="@color/colorPrimaryDark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/InstallAmountLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Install Amount"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/margin_8"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:hintTextColor="@color/colorPrimaryDark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/InstallAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ExpireryDateLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Expirery Date"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/margin_8"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:hintTextColor="@color/colorPrimaryDark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ExpireryDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</LinearLayout>

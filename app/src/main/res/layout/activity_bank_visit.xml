@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".BankVisitActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/toolbarBack"
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="@dimen/margin_30"
+            android:src="@drawable/ic_back_visit"
+            android:padding="@dimen/margin_5"
+            android:layout_marginStart="@dimen/margin_12" />
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="BANK VISIT"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/font_size_20"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/gray" />
+
+    <LinearLayout
+        android:id="@+id/radioGroupContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginHorizontal="@dimen/margin_4">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/margin_2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/cardview_border"
+                android:gravity="center"
+                android:layout_marginEnd="6dp">
+                <RadioButton
+                    android:id="@+id/rbPending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pending"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/tvPendingCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="32dp"
+                    android:minHeight="32dp"
+                    android:padding="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/circle_count_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/cardview_border"
+                android:gravity="center">
+                <RadioButton
+                    android:id="@+id/rbDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Done"
+                    android:buttonTint="@color/black"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/tvDoneCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="32dp"
+                    android:minHeight="32dp"
+                    android:padding="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/circle_count_bg" />
+            </LinearLayout>
+        </RadioGroup>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBankVisits"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible"
+        android:padding="@dimen/margin_10" />
+
+    <ScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profile_photo"
+                    android:layout_width="@dimen/margin_150"
+                    android:layout_height="@dimen/margin_150"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user_profile"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+                <Button
+                    android:id="@+id/buttonUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:text="Capture Image"
+                    android:textColor="@color/primarydark"
+                    android:textSize="@dimen/font_size_12" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Visit Date"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_rounded"
+                    android:backgroundTint="@color/auto_fill_bg"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Visit Time"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_VisitTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_rounded"
+                    android:backgroundTint="@color/auto_fill_bg"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/StaffNameLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Staff Name"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black"
+                android:enabled="false">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Staff_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_rounded"
+                    android:backgroundTint="@color/auto_fill_bg"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/BankNameLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bank Name"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/BankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:background="@drawable/bg_input_rounded"
+                    android:backgroundTint="@color/auto_fill_bg"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/BranchNameLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Branch Name"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/BranchName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:background="@drawable/bg_input_rounded"
+                    android:backgroundTint="@color/auto_fill_bg"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Current Address"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:background="@drawable/bg_input_rounded"
+                    android:backgroundTint="@color/auto_fill_bg"
+                    android:clickable="false"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Latitude"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:textColorHint="@color/black"
+                    app:hintTextColor="@color/black">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_Lat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:background="@drawable/bg_input_rounded"
+                        android:backgroundTint="@color/auto_fill_bg"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Longitude"
+                    android:layout_marginHorizontal="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:textColorHint="@color/black"
+                    app:hintTextColor="@color/black">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_Long"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:background="@drawable/bg_input_rounded"
+                        android:backgroundTint="@color/auto_fill_bg"
+                        android:clickable="false"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CommentsLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Comments (Mandatory) *"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_8"
+                android:visibility="gone"
+                android:textColorHint="@color/black"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:background="@drawable/bg_input_rounded"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <Button
+                android:id="@+id/btnSubmitBankVisit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="Submit Bank Visit"
+                android:background="@drawable/bg_button_custom"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/margin_8"
+        android:src="@drawable/ic_plus"
+        app:tint="@android:color/white"
+        app:backgroundTint="@color/colorPrimaryDark" />
+
+</LinearLayout>

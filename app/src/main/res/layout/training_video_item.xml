@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_12"
+    android:layout_marginTop="@dimen/margin_8"
+    android:layout_marginHorizontal="@dimen/margin_4"
+    android:elevation="@dimen/margin_4"
+    android:background="@color/white"
+    android:padding="@dimen/margin_12">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Video Title -->
+        <TextView
+            android:id="@+id/tvVideoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Video Title"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_1" />
+
+        <!-- YouTube Thumbnail -->
+        <ImageView
+            android:id="@+id/imgThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_200"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_8">
+
+            <CheckBox
+                android:id="@+id/cbCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/btnQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiz"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/margin_8" />
+
+            <Button
+                android:id="@+id/btnCertificate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Certificate"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/margin_8" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

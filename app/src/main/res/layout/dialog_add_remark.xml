@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_20"
+    android:background="@drawable/bg_dialog_rounded">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Remark"
+        android:textSize="@dimen/font_size_22"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_10" />
+
+    <EditText
+        android:id="@+id/mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile Number"
+        android:textColorHint="@color/hint_color"
+        android:background="@drawable/bg_edittext"
+        android:textSize="@dimen/font_size_16"
+        android:padding="@dimen/margin_10"
+        android:textColor="@color/black"
+        android:maxLength="10"
+        android:inputType="textCapSentences"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/etRemark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter remark here"
+        android:textSize="@dimen/font_size_16"
+        android:textColorHint="@color/hint_color"
+        android:background="@drawable/bg_edittext"
+        android:layout_marginTop="@dimen/margin_8"
+        android:padding="@dimen/margin_10"
+        android:textColor="@color/black"
+        android:inputType="textCapSentences"
+        android:maxLines="3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:paddingTop="15dp">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/gray" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/colorPrimary" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VisitRecordActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Visits Record"
+        app:titleTextColor="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:background="@android:color/black" />
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/filter_buttons"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="@dimen/margin_12"-->
+<!--        android:layout_marginBottom="@dimen/margin_8"-->
+<!--        android:gravity="end"-->
+<!--        android:paddingEnd="@dimen/margin_5">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnAll"-->
+<!--            android:layout_width="@dimen/margin_100"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="@dimen/margin_8"-->
+<!--            android:background="@drawable/bg_button_custom"-->
+<!--            android:text="All"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/font_size_14"-->
+<!--            android:elevation="@dimen/margin_2" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnSelectDate"-->
+<!--            android:layout_width="@dimen/margin_100"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/bg_button_custom"-->
+<!--            android:text="Select"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/font_size_15"-->
+<!--            android:elevation="@dimen/margin_2" />-->
+
+<!--    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/filterLayout"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilMobile"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile Number"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:layout_marginTop="@dimen/margin_8"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            app:hintTextColor="@color/colorPrimaryDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Date (DD-MM-YYYY)"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:layout_marginTop="@dimen/margin_8"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            app:hintTextColor="@color/colorPrimaryDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFromDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_14"
+                android:focusable="false"
+                android:inputType="none"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="To Date (YYYY-MM-DD)"-->
+<!--            android:textColorHint="@color/colorPrimaryDark"-->
+<!--            android:layout_marginTop="@dimen/margin_8"-->
+<!--            app:boxBackgroundMode="outline"-->
+<!--            app:boxStrokeColor="@color/colorPrimaryDark"-->
+<!--            app:hintTextColor="@color/colorPrimaryDark">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/etToDate"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="@dimen/font_size_14"-->
+<!--                android:focusable="false"-->
+<!--                android:inputType="none"-->
+<!--                android:textColor="@color/black" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Visit Report"
+            android:layout_marginTop="@dimen/margin_12"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_custom"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/visitRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_10" />
+
+</LinearLayout>

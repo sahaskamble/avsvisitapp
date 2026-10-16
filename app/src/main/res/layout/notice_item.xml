@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="@dimen/margin_8"
+    android:layout_margin="@dimen/margin_8"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardElevation="@dimen/margin_4">
+
+
+    <!-- 🔴 Red Unread Dot -->
+    <ImageView
+        android:id="@+id/ivUnreadDot"
+        android:layout_width="@dimen/margin_10"
+        android:layout_height="@dimen/margin_10"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:layout_above="@id/tvNoticeTime"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:background="@drawable/unread_dot"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_12">
+
+        <!-- 🕒 Time -->
+        <TextView
+            android:id="@+id/tvNoticeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="10:45 AM"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textSize="@dimen/font_size_12"
+            android:textColor="@color/black" />
+
+        <!-- 🏷️ Title -->
+        <TextView
+            android:id="@+id/tvNoticeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="New HR Policy Update"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <!-- 📃 Body -->
+        <TextView
+            android:id="@+id/tvNoticeBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNoticeTitle"
+            android:layout_marginTop="@dimen/margin_4"
+            android:text="Please review the updated policy on remote work..."
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

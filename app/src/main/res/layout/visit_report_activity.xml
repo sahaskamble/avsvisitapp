@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VisitRecordActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Visits Record"
+        app:titleTextColor="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:id="@+id/filter_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_12"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:gravity="end"
+        android:paddingEnd="@dimen/margin_5">
+
+        <Button
+            android:id="@+id/btnFrom"
+            android:layout_width="@dimen/margin_120"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@drawable/bg_button_custom"
+            android:text="From"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14"
+            android:elevation="@dimen/margin_2" />
+
+        <Button
+            android:id="@+id/btnTo"
+            android:layout_width="@dimen/margin_130"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_custom"
+            android:text="To"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_15"
+            android:elevation="@dimen/margin_2" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/visitRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_10" />
+
+</LinearLayout>

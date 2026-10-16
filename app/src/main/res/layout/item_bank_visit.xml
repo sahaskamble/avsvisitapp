@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/bg_input_rounded"
+    android:padding="16dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/tvBankName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bank Name: -"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:paddingBottom="6dp" />
+
+    <TextView
+        android:id="@+id/tvBranchName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Branch Name: -"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvDateAndTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date &amp; Time: -"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address: -"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:paddingBottom="6dp" />
+
+    <TextView
+        android:id="@+id/tvComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comments: -"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
+        android:paddingBottom="4dp" />
+
+</LinearLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginBottom="12dp"-->
+<!--    android:background="@drawable/cardview_border"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="12dp"-->
+<!--    android:foreground="?android:attr/selectableItemBackground"-->
+<!--    android:clickable="true"-->
+<!--    android:focusable="true">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvBankName"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Bank Name: "-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvBranchName"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="Branch Name: "-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="14sp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvDateAndTime"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="Date &amp; Time: "-->
+<!--        android:textColor="@color/gray"-->
+<!--        android:textSize="12sp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvAddress"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:text="Address: "-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="13sp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvComments"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="Comments: "-->
+<!--        android:textColor="@color/colorPrimaryDark"-->
+<!--        android:textSize="14sp"-->
+<!--        android:textStyle="italic" />-->
+
+<!--</LinearLayout>-->
